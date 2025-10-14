@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - GlobeRise - India Investment Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="logo-icon">💸</span>
+                <span class="logo-text">GlobeRise</span>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-chart-pie"></i></span>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item has-submenu">
+                    <a href="#investment" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-chart-line"></i></span>
+                        <span class="nav-text">Investment</span>
+                        <span class="submenu-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="plan.html">Investment plan</a></li>
+                        <li><a href="my investment.html">My investment</a></li>
+                        <li><a href="transaction.html">Transaction history</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-submenu">
+                    <a href="#finance" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-university"></i></span>
+                        <span class="nav-text">Finance</span>
+                        <span class="submenu-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="deposit.html">Deposit</a></li>
+                        <li><a href="withdraw.html">Withdraw</a></li>
+                        <li><a href="wallet.html">Wallet</a></li>
+                        <li><a href="history.html">History</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-submenu">
+                    <a href="#referral" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-share-alt"></i></span>
+                        <span class="nav-text">Referral</span>
+                        <span class="submenu-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="ref-earn.html">Ref & Earn</a></li>
+                        <li><a href="referral-list.html">Referral List</a></li>
+                        <li><a href="earning-history.html">Earning History</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item active">
+                    <a href="notification.html" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-bell"></i></span>
+                        <span class="nav-text">Notifications</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-info-circle"></i></span>
+                        <span class="nav-text">About</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="support.html" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-headset"></i></span>
+                        <span class="nav-text">Support</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="page-title">Notifications</h1>
+            </div>
+            <div class="header-right">
+                <div class="balance-display">
+                    <span class="balance-amount">USD43,873.94</span>
+                </div>
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <img src="logo.jpg" alt="User">
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">Simpson</span>
+                        <span class="user-id">RI2WOVZ9</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page Content -->
+        <div class="page-content">
+            <!-- Notification Settings -->
+            <section class="notification-settings">
+                <h2 class="section-title">Notification Settings</h2>
+                <div class="settings-grid">
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h4>Email Notifications</h4>
+                            <p>Receive updates via email</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h4>Investment Updates</h4>
+                            <p>Get notified about investment returns</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h4>Referral Notifications</h4>
+                            <p>Updates about new referrals</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Notifications List -->
+            <section class="notifications-list">
+                <div class="notifications-header">
+                    <h2 class="section-title">Recent Notifications</h2>
+                    <button class="mark-all-read">Mark All Read</button>
+                </div>
+
+                <div class="notification-items">
+                    <div class="notification-item unread">
+                        <div class="notification-icon success">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="notification-content">
+                            <h4>Investment Return Received</h4>
+                            <p>Your Premium Plan investment has generated USD500.00 profit</p>
+                            <span class="notification-time">2 hours ago</span>
+                        </div>
+                        <div class="notification-actions">
+                            <button class="action-btn">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="notification-item unread">
+                        <div class="notification-icon info">
+                            <i class="fas fa-deposit"></i>
+                        </div>
+                        <div class="notification-content">
+                            <h4>Deposit Confirmed</h4>
+                            <p>Your Bitcoin deposit of USD2,500.00 has been confirmed</p>
+                            <span class="notification-time">5 hours ago</span>
+                        </div>
+                        <div class="notification-actions">
+                            <button class="action-btn">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="notification-item">
+                        <div class="notification-icon warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="notification-content">
+                            <h4>Security Alert</h4>
+                            <p>New login detected from Chrome on Windows</p>
+                            <span class="notification-time">1 day ago</span>
+                        </div>
+                        <div class="notification-actions">
+                            <button class="action-btn">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="notification-item">
+                        <div class="notification-icon success">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="notification-content">
+                            <h4>New Referral</h4>
+                            <p>John Doe joined using your referral link</p>
+                            <span class="notification-time">2 days ago</span>
+                        </div>
+                        <div class="notification-actions">
+                            <button class="action-btn">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="notification-item">
+                        <div class="notification-icon info">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <div class="notification-content">
+                            <h4>Welcome Bonus</h4>
+                            <p>USD100.00 welcome bonus has been credited to your account</p>
+                            <span class="notification-time">3 days ago</span>
+                        </div>
+                        <div class="notification-actions">
+                            <button class="action-btn">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

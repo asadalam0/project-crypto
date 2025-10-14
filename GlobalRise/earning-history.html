@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earning History - GlobeRise</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="logo-icon">💸</span>
+                <span class="logo-text">GlobeRise</span>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-chart-pie"></i></span>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item has-submenu">
+                    <a href="#investment" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-chart-line"></i></span>
+                        <span class="nav-text">Investment</span>
+                        <span class="submenu-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="plan.html">Investment plan</a></li>
+                        <li><a href="my investment.html">My investment</a></li>
+                        <li><a href="transaction.html">Transaction history</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-submenu">
+                    <a href="#finance" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-university"></i></span>
+                        <span class="nav-text">Finance</span>
+                        <span class="submenu-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="deposit.html">Deposit</a></li>
+                        <li><a href="withdraw.html">Withdraw</a></li>
+                        <li><a href="wallet.html">Wallet</a></li>
+                        <li><a href="history.html">History</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-submenu expanded">
+                    <a href="#referral" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-share-alt"></i></span>
+                        <span class="nav-text">Referral</span>
+                        <span class="submenu-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="ref-earn.html">Ref & Earn</a></li>
+                        <li><a href="referral-list.html">Referral List</a></li>
+                        <li><a href="earning-history.html" class="active">Earning History</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="page-title">Earning History</h1>
+            </div>
+            <div class="header-right">
+                <div class="balance-display">
+                    <span class="balance-amount">USD43,873.94</span>
+                </div>
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <img src="https://via.placeholder.com/40x40/4a90e2/ffffff?text=S" alt="User">
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">Simpson</span>
+                        <span class="user-id">RI2WOVZ9</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page Content -->
+        <div class="page-content">
+            <!-- Earning Stats -->
+            <section class="earning-stats">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Total Referral Earnings</h3>
+                            <span class="stat-value">USD1,230.00</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-month"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>This Month</h3>
+                            <span class="stat-value">USD320.00</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-week"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>This Week</h3>
+                            <span class="stat-value">USD85.00</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-day"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Today</h3>
+                            <span class="stat-value">USD25.00</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Earning Filter -->
+            <section class="earning-filter">
+                <div class="filter-container">
+                    <select class="filter-select">
+                        <option>All Earnings</option>
+                        <option>This Month</option>
+                        <option>This Week</option>
+                        <option>Today</option>
+                    </select>
+                    <select class="filter-select">
+                        <option>All Types</option>
+                        <option>Level 1 Commission</option>
+                        <option>Level 2 Commission</option>
+                        <option>Bonus</option>
+                    </select>
+                    <button class="export-btn">
+                        <i class="fas fa-download"></i>
+                        Export
+                    </button>
+                </div>
+            </section>
+
+            <!-- Earning History Table -->
+            <section class="earning-history">
+                <h2 class="section-title">Commission History</h2>
+                <div class="earning-table">
+                    <div class="earning-item">
+                        <div class="earning-type">
+                            <div class="type-icon level1">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="type-info">
+                                <div class="type-name">Level 1 Commission</div>
+                                <div class="type-desc">From: John Doe</div>
+                            </div>
+                        </div>
+                        <div class="earning-date">Oct 6, 2025</div>
+                        <div class="earning-amount">+USD50.00</div>
+                        <div class="earning-status">
+                            <span class="status-paid">Paid</span>
+                        </div>
+                    </div>
+
+                    <div class="earning-item">
+                        <div class="earning-type">
+                            <div class="type-icon level1">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="type-info">
+                                <div class="type-name">Level 1 Commission</div>
+                                <div class="type-desc">From: Alice Smith</div>
+                            </div>
+                        </div>
+                        <div class="earning-date">Oct 5, 2025</div>
+                        <div class="earning-amount">+USD100.00</div>
+                        <div class="earning-status">
+                            <span class="status-paid">Paid</span>
+                        </div>
+                    </div>
+
+                    <div class="earning-item">
+                        <div class="earning-type">
+                            <div class="type-icon level2">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="type-info">
+                                <div class="type-name">Level 2 Commission</div>
+                                <div class="type-desc">From: Mike Brown</div>
+                            </div>
+                        </div>
+                        <div class="earning-date">Oct 4, 2025</div>
+                        <div class="earning-amount">+USD25.00</div>
+                        <div class="earning-status">
+                            <span class="status-paid">Paid</span>
+                        </div>
+                    </div>
+
+                    <div class="earning-item">
+                        <div class="earning-type">
+                            <div class="type-icon bonus">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <div class="type-info">
+                                <div class="type-name">Referral Bonus</div>
+                                <div class="type-desc">10 Referral Milestone</div>
+                            </div>
+                        </div>
+                        <div class="earning-date">Oct 3, 2025</div>
+                        <div class="earning-amount">+USD200.00</div>
+                        <div class="earning-status">
+                            <span class="status-paid">Paid</span>
+                        </div>
+                    </div>
+
+                    <div class="earning-item">
+                        <div class="earning-type">
+                            <div class="type-icon level1">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="type-info">
+                                <div class="type-name">Level 1 Commission</div>
+                                <div class="type-desc">From: Sarah Johnson</div>
+                            </div>
+                        </div>
+                        <div class="earning-date">Oct 2, 2025</div>
+                        <div class="earning-amount">+USD75.00</div>
+                        <div class="earning-status">
+                            <span class="status-pending">Pending</span>
+                        </div>
+                    </div>
+
+                    <div class="earning-item">
+                        <div class="earning-type">
+                            <div class="type-icon level1">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="type-info">
+                                <div class="type-name">Level 1 Commission</div>
+                                <div class="type-desc">From: David Wilson</div>
+                            </div>
+                        </div>
+                        <div class="earning-date">Oct 1, 2025</div>
+                        <div class="earning-amount">+USD40.00</div>
+                        <div class="earning-status">
+                            <span class="status-paid">Paid</span>
+                        </div>
+                    </div>
+
+                    <div class="earning-item">
+                        <div class="earning-type">
+                            <div class="type-icon level2">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="type-info">
+                                <div class="type-name">Level 2 Commission</div>
+                                <div class="type-desc">From: Emma Davis</div>
+                            </div>
+                        </div>
+                        <div class="earning-date">Sep 30, 2025</div>
+                        <div class="earning-amount">+USD15.00</div>
+                        <div class="earning-status">
+                            <span class="status-paid">Paid</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pagination -->
+            <section class="pagination">
+                <div class="pagination-info">
+                    Showing 1-7 of 45 earnings
+                </div>
+                <div class="pagination-controls">
+                    <button class="page-btn prev" disabled>Previous</button>
+                    <button class="page-number active">1</button>
+                    <button class="page-number">2</button>
+                    <button class="page-number">3</button>
+                    <button class="page-number">7</button>
+                    <button class="page-btn next">Next</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

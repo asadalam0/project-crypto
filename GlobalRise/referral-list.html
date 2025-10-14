@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referral List - GlobeRise</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="logo-icon">💸</span>
+                <span class="logo-text">GlobeRise</span>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-chart-pie"></i></span>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item has-submenu">
+                    <a href="#investment" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-chart-line"></i></span>
+                        <span class="nav-text">Investment</span>
+                        <span class="submenu-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="plan.html">Investment plan</a></li>
+                        <li><a href="my investment.html">My investment</a></li>
+                        <li><a href="transaction.html">Transaction history</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-submenu">
+                    <a href="#finance" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-university"></i></span>
+                        <span class="nav-text">Finance</span>
+                        <span class="submenu-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="deposit.html">Deposit</a></li>
+                        <li><a href="withdraw.html">Withdraw</a></li>
+                        <li><a href="wallet.html">Wallet</a></li>
+                        <li><a href="history.html">History</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-submenu expanded">
+                    <a href="#referral" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-share-alt"></i></span>
+                        <span class="nav-text">Referral</span>
+                        <span class="submenu-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="ref-earn.html">Ref & Earn</a></li>
+                        <li><a href="referral-list.html" class="active">Referral List</a></li>
+                        <li><a href="earning-history.html">Earning History</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="page-title">Referral List</h1>
+            </div>
+            <div class="header-right">
+                <div class="balance-display">
+                    <span class="balance-amount">USD43,873.94</span>
+                </div>
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <img src="logo.jpg" alt="User">
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">Simpson</span>
+                        <span class="user-id">RI2WOVZ9</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page Content -->
+        <div class="page-content">
+            <!-- Referral Overview -->
+            <section class="referral-overview">
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <div class="card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Total Referrals</h3>
+                            <span class="card-value">24</span>
+                        </div>
+                    </div>
+                    <div class="overview-card">
+                        <div class="card-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Active Referrals</h3>
+                            <span class="card-value">18</span>
+                        </div>
+                    </div>
+                    <div class="overview-card">
+                        <div class="card-icon">
+                            <i class="fas fa-calendar-day"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>This Month</h3>
+                            <span class="card-value">5</span>
+                        </div>
+                    </div>
+                    <div class="overview-card">
+                        <div class="card-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Total Earned</h3>
+                            <span class="card-value">USD1,230</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Referral Filter -->
+            <section class="referral-filter">
+                <div class="filter-container">
+                    <select class="filter-select">
+                        <option>All Referrals</option>
+                        <option>Active Only</option>
+                        <option>Inactive Only</option>
+                        <option>This Month</option>
+                    </select>
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search referrals...">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Referral List -->
+            <section class="referral-list">
+                <h2 class="section-title">My Referrals</h2>
+                <div class="referral-table">
+                    <div class="referral-item">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <img src="https://via.placeholder.com/40x40/00ff88/000000?text=JD" alt="User">
+                            </div>
+                            <div class="user-details">
+                                <div class="user-name">John Doe</div>
+                                <div class="user-id">ID: JD5X7K9M</div>
+                            </div>
+                        </div>
+                        <div class="referral-date">Oct 5, 2025</div>
+                        <div class="referral-status">
+                            <span class="status-active">Active</span>
+                        </div>
+                        <div class="referral-deposits">USD2,500.00</div>
+                        <div class="referral-commission">USD250.00</div>
+                        <div class="referral-actions">
+                            <button class="action-btn">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="referral-item">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <img src="https://via.placeholder.com/40x40/0099ff/ffffff?text=AS" alt="User">
+                            </div>
+                            <div class="user-details">
+                                <div class="user-name">Alice Smith</div>
+                                <div class="user-id">ID: AS8L2P4N</div>
+                            </div>
+                        </div>
+                        <div class="referral-date">Oct 3, 2025</div>
+                        <div class="referral-status">
+                            <span class="status-active">Active</span>
+                        </div>
+                        <div class="referral-deposits">USD5,000.00</div>
+                        <div class="referral-commission">USD500.00</div>
+                        <div class="referral-actions">
+                            <button class="action-btn">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="referral-item">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <img src="https://via.placeholder.com/40x40/ff9900/ffffff?text=MB" alt="User">
+                            </div>
+                            <div class="user-details">
+                                <div class="user-name">Mike Brown</div>
+                                <div class="user-id">ID: MB3R6Y8T</div>
+                            </div>
+                        </div>
+                        <div class="referral-date">Oct 1, 2025</div>
+                        <div class="referral-status">
+                            <span class="status-inactive">Inactive</span>
+                        </div>
+                        <div class="referral-deposits">USD1,000.00</div>
+                        <div class="referral-commission">USD100.00</div>
+                        <div class="referral-actions">
+                            <button class="action-btn">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="referral-item">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <img src="https://via.placeholder.com/40x40/9966ff/ffffff?text=SJ" alt="User">
+                            </div>
+                            <div class="user-details">
+                                <div class="user-name">Sarah Johnson</div>
+                                <div class="user-id">ID: SJ7H9K2L</div>
+                            </div>
+                        </div>
+                        <div class="referral-date">Sep 28, 2025</div>
+                        <div class="referral-status">
+                            <span class="status-active">Active</span>
+                        </div>
+                        <div class="referral-deposits">USD3,200.00</div>
+                        <div class="referral-commission">USD320.00</div>
+                        <div class="referral-actions">
+                            <button class="action-btn">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="referral-item">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <img src="https://via.placeholder.com/40x40/ff3366/ffffff?text=DW" alt="User">
+                            </div>
+                            <div class="user-details">
+                                <div class="user-name">David Wilson</div>
+                                <div class="user-id">ID: DW4M8N7P</div>
+                            </div>
+                        </div>
+                        <div class="referral-date">Sep 25, 2025</div>
+                        <div class="referral-status">
+                            <span class="status-active">Active</span>
+                        </div>
+                        <div class="referral-deposits">USD1,800.00</div>
+                        <div class="referral-commission">USD180.00</div>
+                        <div class="referral-actions">
+                            <button class="action-btn">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pagination -->
+            <section class="pagination">
+                <div class="pagination-info">
+                    Showing 1-5 of 24 referrals
+                </div>
+                <div class="pagination-controls">
+                    <button class="page-btn prev" disabled>Previous</button>
+                    <button class="page-number active">1</button>
+                    <button class="page-number">2</button>
+                    <button class="page-number">3</button>
+                    <button class="page-number">5</button>
+                    <button class="page-btn next">Next</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

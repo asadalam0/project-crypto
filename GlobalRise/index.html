@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobeRise - India Investment Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="logo-icon">💸</span>
+                <span class="logo-text">GlobeRise</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="nav-item active">
+                    <a href="index.html" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-chart-pie"></i></span>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item has-submenu">
+                    <a href="#investment" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-chart-line"></i></span>
+                        <span class="nav-text">Investment</span>
+                        <span class="submenu-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </a>
+
+                    <ul class="submenu">
+                        <li><a href="plan.html">Investment plan</a></li>
+                        <li><a href="my-investment.html">My investment</a></li>
+                        <li><a href="transaction.html">Transaction history</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-submenu">
+                    <a href="#finance" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-university"></i></span>
+                        <span class="nav-text">Finance</span>
+                        <span class="submenu-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="deposit.html">Deposit</a></li>
+                        <li><a href="withdraw.html">Withdraw</a></li>
+                        <li><a href="wallet.html">Wallet</a></li>
+                        <li><a href="history.html">History</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-submenu">
+                    <a href="#referral" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-share-alt"></i></span>
+                        <span class="nav-text">Referral</span>
+                        <span class="submenu-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="ref-earn.html">Ref & Earn</a></li>
+                        <li><a href="referral-list.html">Referral List</a></li>
+                        <li><a href="earning-history.html">Earning History</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="notification.html" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-bell"></i></span>
+                        <span class="nav-text">Notifications</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-info-circle"></i></span>
+                        <span class="nav-text">About</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="support.html" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-headset"></i></span>
+                        <span class="nav-text">Support</span>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="header-right">
+                <div class="balance-display">
+                    <span class="balance-amount">USD43,873.94</span>
+                </div>
+                <div class="header-icons">
+                    <button class="header-btn">
+                        <i class="fas fa-globe"></i>
+                    </button>
+                    <button class="header-btn">
+                        <i class="fas fa-phone"></i>
+                    </button>
+                    <button class="header-btn">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                </div>
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <img src="logo.jpg" alt="User">
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">Ethan</span>
+                        <span class="user-id">Userid: HR2UAZ9</span>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- User Account Info HR2UAZ0-->
+        <div class="account-info">
+            <div class="account-balance">
+                <div>
+                    <span class="balance-label">Account Balance</span>
+                    <span class="balance-value">USD43873.94 <span class="wallet-type">Main Wallet</span></span>
+                </div>
+                <div>
+                    <span class="balance-value">USD4482.94 <span class="wallet-type">Total Earning</span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <!-- Last 15 Days Activity -->
+            <section class="activity-section">
+                <h2 class="section-title">Last 15 Days Activity</h2>
+                <div class="activity-summary">
+                    <span class="earnings-text">Total Earnings: <span class="earnings-amount">USD4482.94</span></span>
+                    <span class="wallet-text">Main Wallet: <span class="wallet-amount">USD43873.94</span></span>
+                </div>
+                <div class="chart-container">
+                    <canvas id="activityChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Main Options -->
+            <section class="main-options">
+                <h2 class="section-title">Main Options</h2>
+                <div class="options-grid">
+                    <div class="option-card">
+                        <h3>Main Wallet Balance</h3>
+                        <div class="balance-display-card">
+                            <span class="current-label">Current:</span>
+                            <span class="current-amount">USD43873.94</span>
+                        </div>
+                        <div class="chart-container-small">
+                            <canvas id="walletChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="option-card">
+                        <h3>Total Earning</h3>
+                        <div class="balance-display-card">
+                            <span class="total-label">Total:</span>
+                            <span class="total-amount">USD4482.94</span>
+                        </div>
+                        <div class="chart-container-small">
+                            <canvas id="earningChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Wallet Management -->
+            <section class="wallet-management">
+                <h2 class="section-title">Wallet Management</h2>
+                <div class="wallet-grid">
+                    <div class="wallet-card deposit-card">
+                        <div class="wallet-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <div class="wallet-info">
+                            <span class="wallet-label">Deposit</span>
+                            <span class="wallet-amount">USD63000.00</span>
+                        </div>
+                    </div>
+                    <div class="wallet-card withdraw-card">
+                        <div class="wallet-icon">
+                            <i class="fas fa-upload"></i>
+                        </div>
+                        <div class="wallet-info">
+                            <span class="wallet-label">Withdraw</span>
+                            <span class="wallet-amount">USD0.00</span>
+                        </div>
+                    </div>
+                    <div class="wallet-card pending-deposit-card">
+                        <div class="wallet-icon">
+                            <i class="fas fa-hourglass-half"></i>
+                        </div>
+                        <div class="wallet-info">
+                            <span class="wallet-label">Pending Deposit</span>
+                            <span class="wallet-amount">USD0.00</span>
+                        </div>
+                    </div>
+                    <div class="wallet-card pending-withdraw-card">
+                        <div class="wallet-icon">
+                            <i class="fas fa-hourglass-half"></i>
+                        </div>
+                        <div class="wallet-info">
+                            <span class="wallet-label">Pending Withdraw</span>
+                            <span class="wallet-amount">USD0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Investment Plans -->
+            <section class="investment-plans">
+                <div class="plans-grid">
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <i class="fas fa-check-circle plan-check"></i>
+                            <span class="plan-interest">Interest</span>
+                            <span class="plan-rate">0% Daily</span>
+                        </div>
+                        <div class="plan-return">
+                            <i class="fas fa-check-circle plan-check"></i>
+                            <span class="return-label">Total Return</span>
+                            <span class="return-amount">USD0.00 +</span>
+                            <span class="capital-badge">Capital</span>
+                        </div>
+                        <button class="invest-btn">Invest Now</button>
+                    </div>
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <i class="fas fa-check-circle plan-check"></i>
+                            <span class="plan-interest">Total Return</span>
+                            <span class="plan-rate">USD40.00 +</span>
+                            <span class="capital-badge">Capital</span>
+                        </div>
+                        <button class="invest-btn">Invest Now</button>
+                    </div>
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <i class="fas fa-check-circle plan-check"></i>
+                            <span class="plan-interest">Total Return</span>
+                            <span class="plan-rate">USD8.00 +</span>
+                            <span class="capital-badge">Capital</span>
+                        </div>
+                        <button class="invest-btn">Invest Now</button>
+                    </div>
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <i class="fas fa-check-circle plan-check"></i>
+                            <span class="plan-interest">Interest</span>
+                            <span class="plan-rate">10% Daily</span>
+                        </div>
+                        <div class="plan-return">
+                            <i class="fas fa-check-circle plan-check"></i>
+                            <span class="return-label">Total Return</span>
+                            <span class="return-amount">USD1200.00 +</span>
+                            <span class="capital-badge">Capital</span>
+                        </div>
+                        <button class="invest-btn">Invest Now</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Activity -->
+            <section class="recent-activity">
+                <h2 class="section-title">Recent Activity</h2>
+                <div class="activity-table">
+                    <div class="table-header">
+                        <div class="header-cell">Type</div>
+                        <div class="header-cell">Amount</div>
+                        <div class="header-cell">Status</div>
+                        <div class="header-cell">Date</div>
+                    </div>
+                    <div class="table-body">
+                        <div class="table-row">
+                            <div class="table-cell">Profit Return (Auto)</div>
+                            <div class="table-cell">USD0.00</div>
+                            <div class="table-cell"><span class="status-completed">Completed</span></div>
+                            <div class="table-cell">Oct 4, 2025, 11:55 PM</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell">Profit Return (Auto)</div>
+                            <div class="table-cell">USD2.00</div>
+                            <div class="table-cell"><span class="status-completed">Completed</span></div>
+                            <div class="table-cell">Oct 4, 2025, 11:55 PM</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell">Profit Return (Auto)</div>
+                            <div class="table-cell">USD500.00</div>
+                            <div class="table-cell"><span class="status-completed">Completed</span></div>
+                            <div class="table-cell">Oct 4, 2025, 11:55 PM</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell">Profit Return (Auto)</div>
+                            <div class="table-cell">USD100.00</div>
+                            <div class="table-cell"><span class="status-completed">Completed</span></div>
+                            <div class="table-cell">Oct 4, 2025, 11:55 PM</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell">Profit Return (Auto)</div>
+                            <div class="table-cell">USD0.00</div>
+                            <div class="table-cell"><span class="status-completed">Completed</span></div>
+                            <div class="table-cell">Oct 4, 2025, 11:55 PM</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Referral Management -->
+            <section class="referral-management">
+                <h2 class="section-title">Referral Management</h2>
+                <div class="referral-grid">
+                    <div class="referral-card">
+                        <div class="referral-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="referral-info">
+                            <span class="referral-label">Total Referral Commission</span>
+                            <span class="referral-amount">USD0.00</span>
+                        </div>
+                    </div>
+                    <div class="referral-card">
+                        <div class="referral-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="referral-info">
+                            <span class="referral-label">Total Referrals</span>
+                            <span class="referral-amount">2</span>
+                        </div>
+                    </div>
+                    <div class="referral-card">
+                        <div class="referral-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <div class="referral-info">
+                            <span class="referral-label">Link Click</span>
+                            <span class="referral-amount">0</span>
+                        </div>
+                    </div>
+                    <div class="referral-card">
+                        <div class="referral-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <div class="referral-info">
+                            <span class="referral-label">Total Bonus</span>
+                            <span class="referral-amount">USD1230.00</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Investment Plans -->
+            <section class="featured-plans">
+                <h2 class="section-title">Featured Investment Plans</h2>
+                <div class="featured-grid">
+                    <div class="featured-card dioman-card">
+                        <div class="featured-header">
+                            <h3>Dioman</h3>
+                        </div>
+                        <div class="featured-rate">
+                            <span class="rate-number">0%</span>
+                            <span class="rate-period">Daily</span>
+                        </div>
+                        <div class="featured-details">
+                            <div class="detail-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="detail-label">For</span>
+                                <span class="detail-value">11 Times</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="detail-label">Min</span>
+                                <span class="detail-value">USD100.00</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="detail-label">Max</span>
+                                <span class="detail-value">USD1000.00</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="detail-label">Capital Back</span>
+                                <span class="detail-value">YES</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="featured-card starter-card">
+                        <div class="featured-header">
+                            <h3>Starter Plan</h3>
+                        </div>
+                        <div class="featured-rate">
+                            <span class="rate-number">2%</span>
+                            <span class="rate-period">Hourly</span>
+                        </div>
+                        <div class="featured-details">
+                            <div class="detail-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="detail-label">For</span>
+                                <span class="detail-value">200 Times</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="detail-label">Min</span>
+                                <span class="detail-value">USD10.00</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="detail-label">Max</span>
+                                <span class="detail-value">USD1000.00</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="detail-label">Capital Back</span>
+                                <span class="detail-value">YES</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="featured-card gold-card">
+                        <div class="featured-header">
+                            <h3>Gold Plan</h3>
+                        </div>
+                        <div class="featured-rate">
+                            <span class="rate-number">8%</span>
+                            <span class="rate-period">Hourly</span>
+                        </div>
+                        <div class="featured-details">
+                            <div class="detail-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="detail-label">For</span>
+                                <span class="detail-value">1 Times</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="detail-label">Min</span>
+                                <span class="detail-value">USD100.00</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="detail-label">Max</span>
+                                <span class="detail-value">USD1000000.00</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="detail-label">Capital Back</span>
+                                <span class="detail-value">YES</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="featured-card premium-card">
+                        <div class="featured-header">
+                            <h3>Premium Plan</h3>
+                        </div>
+                        <div class="featured-rate">
+                            <span class="rate-number">10%</span>
+                            <span class="rate-period">Daily</span>
+                        </div>
+                        <div class="featured-details">
+                            <div class="detail-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="detail-label">For</span>
+                                <span class="detail-value">12 Times</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="detail-label">Min</span>
+                                <span class="detail-value">USD1000.00</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="detail-label">Max</span>
+                                <span class="detail-value">USD100000.00</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="detail-label">Capital Back</span>
+                                <span class="detail-value">YES</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Chat Support Button -->
+    <div class="chat-support">
+        <button class="chat-btn">
+            <span class="chat-text">We Are Here!</span>
+            <div class="chat-icon">
+                <i class="fas fa-comment"></i>
+                <span class="notification-badge">1</span>
+            </div>
+        </button>
+    </div>
+
+    <script src="app.js"></script>
+    
+</body>
+
+</html>

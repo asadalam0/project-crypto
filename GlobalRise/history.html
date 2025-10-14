@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History - GlobeRise</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="logo-icon">💸</span>
+                <span class="logo-text">GlobeRise</span>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-chart-pie"></i></span>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item has-submenu">
+                    <a href="#investment" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-chart-line"></i></span>
+                        <span class="nav-text">Investment</span>
+                        <span class="submenu-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="plan.html">Investment plan</a></li>
+                        <li><a href="my-investment.html">My investment</a></li>
+                        <li><a href="transaction.html">Transaction history</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-submenu expanded">
+                    <a href="#finance" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-university"></i></span>
+                        <span class="nav-text">Finance</span>
+                        <span class="submenu-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="deposit.html">Deposit</a></li>
+                        <li><a href="withdraw.html">Withdraw</a></li>
+                        <li><a href="wallet.html">Wallet</a></li>
+                        <li><a href="history.html" class="active">History</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-submenu">
+                    <a href="#referral" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-share-alt"></i></span>
+                        <span class="nav-text">Referral</span>
+                        <span class="submenu-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="ref-earn.html">Ref & Earn</a></li>
+                        <li><a href="referral-list.html">Referral List</a></li>
+                        <li><a href="earning-history.html">Earning History</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="page-title">Financial History</h1>
+            </div>
+            <div class="header-right">
+                <div class="balance-display">
+                    <span class="balance-amount">USD43,873.94</span>
+                </div>
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <img src="logo.jpg" alt="User">
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">Simpson</span>
+                        <span class="user-id">RI2WOVZ9</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page Content -->
+        <div class="page-content">
+            <!-- History Stats -->
+            <section class="history-stats">
+                <h2 class="section-title">Transaction Summary</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-list"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Total Transactions</h3>
+                            <span class="stat-value">247</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Total Deposits</h3>
+                            <span class="stat-value">USD63,000.00</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-arrow-up"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Total Withdrawals</h3>
+                            <span class="stat-value">USD18,500.00</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Total Profits</h3>
+                            <span class="stat-value">USD4,482.94</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- History Filter -->
+            <section class="history-filter">
+                <div class="filter-container">
+                    <select class="filter-select">
+                        <option>All Types</option>
+                        <option>Deposits</option>
+                        <option>Withdrawals</option>
+                        <option>Profits</option>
+                    </select>
+                    <select class="filter-select">
+                        <option>Last 30 Days</option>
+                        <option>Last 7 Days</option>
+                        <option>This Month</option>
+                        <option>Custom Range</option>
+                    </select>
+                    <button class="export-btn">
+                        <i class="fas fa-download"></i>
+                        Export
+                    </button>
+                </div>
+            </section>
+
+            <!-- History Table -->
+            <section class="history-table">
+                <div class="table-container">
+                    <div class="table-wrapper">
+                        <div class="history-item">
+                            <div class="history-type deposit">
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                            <div class="history-details">
+                                <div class="history-name">Bitcoin Deposit</div>
+                                <div class="history-id">#TXN-001</div>
+                            </div>
+                            <div class="history-date">Oct 6, 2025</div>
+                            <div class="history-amount positive">+USD2,500.00</div>
+                            <div class="history-status">
+                                <span class="status-completed">Completed</span>
+                            </div>
+                        </div>
+
+                        <div class="history-item">
+                            <div class="history-type profit">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <div class="history-details">
+                                <div class="history-name">Profit Return</div>
+                                <div class="history-id">#TXN-002</div>
+                            </div>
+                            <div class="history-date">Oct 6, 2025</div>
+                            <div class="history-amount positive">+USD500.00</div>
+                            <div class="history-status">
+                                <span class="status-completed">Completed</span>
+                            </div>
+                        </div>
+
+                        <div class="history-item">
+                            <div class="history-type withdraw">
+                                <i class="fas fa-arrow-up"></i>
+                            </div>
+                            <div class="history-details">
+                                <div class="history-name">Bank Withdrawal</div>
+                                <div class="history-id">#TXN-003</div>
+                            </div>
+                            <div class="history-date">Oct 5, 2025</div>
+                            <div class="history-amount negative">-USD1,000.00</div>
+                            <div class="history-status">
+                                <span class="status-processing">Processing</span>
+                            </div>
+                        </div>
+
+                        <div class="history-item">
+                            <div class="history-type investment">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <div class="history-details">
+                                <div class="history-name">Gold Plan Investment</div>
+                                <div class="history-id">#TXN-004</div>
+                            </div>
+                            <div class="history-date">Oct 4, 2025</div>
+                            <div class="history-amount negative">-USD2,500.00</div>
+                            <div class="history-status">
+                                <span class="status-completed">Completed</span>
+                            </div>
+                        </div>
+
+                        <div class="history-item">
+                            <div class="history-type bonus">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <div class="history-details">
+                                <div class="history-name">Welcome Bonus</div>
+                                <div class="history-id">#TXN-005</div>
+                            </div>
+                            <div class="history-date">Oct 3, 2025</div>
+                            <div class="history-amount positive">+USD100.00</div>
+                            <div class="history-status">
+                                <span class="status-completed">Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

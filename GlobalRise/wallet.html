@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet - GlobeRise</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="logo-icon">💸</span>
+                <span class="logo-text">GlobeRise</span>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-chart-pie"></i></span>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item has-submenu">
+                    <a href="#investment" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-chart-line"></i></span>
+                        <span class="nav-text">Investment</span>
+                        <span class="submenu-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="plan.html">Investment plan</a></li>
+                        <li><a href="my-investment.html">My investment</a></li>
+                        <li><a href="transaction.html">Transaction history</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-submenu expanded">
+                    <a href="#finance" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-university"></i></span>
+                        <span class="nav-text">Finance</span>
+                        <span class="submenu-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="deposit.html">Deposit</a></li>
+                        <li><a href="withdraw.html">Withdraw</a></li>
+                        <li><a href="wallet.html" class="active">Wallet</a></li>
+                        <li><a href="history.html">History</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-submenu">
+                    <a href="#referral" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-share-alt"></i></span>
+                        <span class="nav-text">Referral</span>
+                        <span class="submenu-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="ref-earn.html">Ref & Earn</a></li>
+                        <li><a href="referral-list.html">Referral List</a></li>
+                        <li><a href="earning-history.html">Earning History</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="page-title">My Wallet</h1>
+            </div>
+            <div class="header-right">
+                <div class="balance-display">
+                    <span class="balance-amount">USD43,873.94</span>
+                </div>
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <img src="logo.jpg" alt="User">
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">Simpson</span>
+                        <span class="user-id">RI2WOVZ9</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page Content -->
+        <div class="page-content">
+            <!-- Wallet Overview -->
+            <section class="wallet-overview">
+                <h2 class="section-title">Wallet Overview</h2>
+                <div class="overview-cards">
+                    <div class="overview-card main">
+                        <div class="card-header">
+                            <h3>Main Balance</h3>
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <div class="card-amount">USD43,873.94</div>
+                        <div class="card-actions">
+                            <button class="action-btn deposit">
+                                <i class="fas fa-plus"></i>
+                                Deposit
+                            </button>
+                            <button class="action-btn withdraw">
+                                <i class="fas fa-minus"></i>
+                                Withdraw
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-card earnings">
+                        <div class="card-header">
+                            <h3>Total Earnings</h3>
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <div class="card-amount">USD4,482.94</div>
+                        <div class="card-change positive">+18.5% This Month</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Wallet Activity -->
+            <section class="wallet-activity">
+                <h2 class="section-title">Wallet Activity</h2>
+                <div class="activity-grid">
+                    <div class="activity-card">
+                        <div class="activity-icon deposit">
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                        <div class="activity-info">
+                            <h4>Total Deposits</h4>
+                            <span class="activity-amount">USD63,000.00</span>
+                        </div>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon withdraw">
+                            <i class="fas fa-arrow-up"></i>
+                        </div>
+                        <div class="activity-info">
+                            <h4>Total Withdrawals</h4>
+                            <span class="activity-amount">USD18,500.00</span>
+                        </div>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon investment">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="activity-info">
+                            <h4>Active Investments</h4>
+                            <span class="activity-amount">USD25,000.00</span>
+                        </div>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon bonus">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <div class="activity-info">
+                            <h4>Bonus & Referrals</h4>
+                            <span class="activity-amount">USD1,230.00</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Actions -->
+            <section class="quick-actions">
+                <h2 class="section-title">Quick Actions</h2>
+                <div class="actions-grid">
+                    <button class="quick-action-btn deposit">
+                        <i class="fas fa-download"></i>
+                        <span>Deposit Funds</span>
+                    </button>
+                    <button class="quick-action-btn withdraw">
+                        <i class="fas fa-upload"></i>
+                        <span>Withdraw Funds</span>
+                    </button>
+                    <button class="quick-action-btn transfer">
+                        <i class="fas fa-exchange-alt"></i>
+                        <span>Transfer Funds</span>
+                    </button>
+                    <button class="quick-action-btn history">
+                        <i class="fas fa-history"></i>
+                        <span>View History</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Recent Transactions -->
+            <section class="recent-transactions">
+                <h2 class="section-title">Recent Transactions</h2>
+                <div class="transactions-list">
+                    <div class="transaction-item">
+                        <div class="transaction-type deposit">
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-name">Bitcoin Deposit</div>
+                            <div class="transaction-date">Oct 6, 2025</div>
+                        </div>
+                        <div class="transaction-amount positive">+USD2,500.00</div>
+                    </div>
+                    <div class="transaction-item">
+                        <div class="transaction-type profit">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-name">Profit Return</div>
+                            <div class="transaction-date">Oct 6, 2025</div>
+                        </div>
+                        <div class="transaction-amount positive">+USD500.00</div>
+                    </div>
+                    <div class="transaction-item">
+                        <div class="transaction-type withdraw">
+                            <i class="fas fa-arrow-up"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-name">Bank Withdrawal</div>
+                            <div class="transaction-date">Oct 5, 2025</div>
+                        </div>
+                        <div class="transaction-amount negative">-USD1,000.00</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

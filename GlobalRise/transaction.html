@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History - GlobeRise</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="logo-icon">💸</span>
+                <span class="logo-text">GlobeRise</span>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-chart-pie"></i></span>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item has-submenu expanded">
+                    <a href="#investment" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-chart-line"></i></span>
+                        <span class="nav-text">Investment</span>
+                        <span class="submenu-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="plan.html">Investment plan</a></li>
+                        <li><a href="my-investment.html">My investment</a></li>
+                        <li><a href="transaction.html" class="active">Transaction history</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-submenu">
+                    <a href="#finance" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-university"></i></span>
+                        <span class="nav-text">Finance</span>
+                        <span class="submenu-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="deposit.html">Deposit</a></li>
+                        <li><a href="withdraw.html">Withdraw</a></li>
+                        <li><a href="wallet.html">Wallet</a></li>
+                        <li><a href="history.html">History</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-submenu">
+                    <a href="#referral" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-share-alt"></i></span>
+                        <span class="nav-text">Referral</span>
+                        <span class="submenu-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="ref-earn.html">Ref & Earn</a></li>
+                        <li><a href="referral-list.html">Referral List</a></li>
+                        <li><a href="earning-history.html">Earning History</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="notifications.html" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-bell"></i></span>
+                        <span class="nav-text">Notifications</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-info-circle"></i></span>
+                        <span class="nav-text">About</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="support.html" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-headset"></i></span>
+                        <span class="nav-text">Support</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#signout" class="nav-link">
+                        <span class="nav-icon"><i class="fas fa-sign-out-alt"></i></span>
+                        <span class="nav-text">Sign out</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="page-title">Transaction History</h1>
+            </div>
+            <div class="header-right">
+                <div class="balance-display">
+                    <span class="balance-amount">USD43,873.94</span>
+                </div>
+                <div class="header-icons">
+                    <button class="header-btn">
+                        <i class="fas fa-globe"></i>
+                    </button>
+                    <button class="header-btn">
+                        <i class="fas fa-phone"></i>
+                    </button>
+                    <button class="header-btn">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                </div>
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <img src="logo.jpg" alt="User">
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">Simpson</span>
+                        <span class="user-id">Userid: RI2WOVZ9</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page Content -->
+        <div class="page-content">
+            <!-- Transaction Overview -->
+            <section class="transaction-overview">
+                <div class="overview-cards">
+                    <div class="overview-card total">
+                        <div class="overview-icon">
+                            <i class="fas fa-list"></i>
+                        </div>
+                        <div class="overview-info">
+                            <h3>Total Transactions</h3>
+                            <span class="overview-amount">247</span>
+                            <span class="overview-change positive">This month</span>
+                        </div>
+                    </div>
+                    <div class="overview-card deposit">
+                        <div class="overview-icon">
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                        <div class="overview-info">
+                            <h3>Total Deposits</h3>
+                            <span class="overview-amount">USD63,000.00</span>
+                            <span class="overview-change positive">+12.5%</span>
+                        </div>
+                    </div>
+                    <div class="overview-card withdraw">
+                        <div class="overview-icon">
+                            <i class="fas fa-arrow-up"></i>
+                        </div>
+                        <div class="overview-info">
+                            <h3>Total Withdrawals</h3>
+                            <span class="overview-amount">USD18,500.00</span>
+                            <span class="overview-change neutral">-5.2%</span>
+                        </div>
+                    </div>
+                    <div class="overview-card profit">
+                        <div class="overview-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <div class="overview-info">
+                            <h3>Total Profits</h3>
+                            <span class="overview-amount">USD4,482.94</span>
+                            <span class="overview-change positive">+18.7%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Transaction Filters -->
+            <section class="transaction-filters">
+                <div class="filters-container">
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-filter="all">All Transactions</button>
+                        <button class="filter-tab" data-filter="deposit">Deposits</button>
+                        <button class="filter-tab" data-filter="withdraw">Withdrawals</button>
+                        <button class="filter-tab" data-filter="profit">Profits</button>
+                        <button class="filter-tab" data-filter="bonus">Bonus</button>
+                        <button class="filter-tab" data-filter="referral">Referral</button>
+                    </div>
+                    <div class="filter-controls">
+                        <div class="date-filter">
+                            <input type="date" id="startDate" class="date-input">
+                            <span class="date-separator">to</span>
+                            <input type="date" id="endDate" class="date-input">
+                        </div>
+                        <div class="amount-filter">
+                            <select id="amountFilter" class="amount-select">
+                                <option value="all">All Amounts</option>
+                                <option value="0-100">$0 - $100</option>
+                                <option value="100-1000">$100 - $1,000</option>
+                                <option value="1000-10000">$1,000 - $10,000</option>
+                                <option value="10000+">$10,000+</option>
+                            </select>
+                        </div>
+                        <div class="status-filter">
+                            <select id="statusFilter" class="status-select">
+                                <option value="all">All Status</option>
+                                <option value="completed">Completed</option>
+                                <option value="pending">Pending</option>
+                                <option value="processing">Processing</option>
+                                <option value="failed">Failed</option>
+                            </select>
+                        </div>
+                        <button class="export-btn">
+                            <i class="fas fa-download"></i>
+                            Export
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Transaction Table -->
+            <section class="transaction-table">
+                <div class="table-container">
+                    <div class="table-header">
+                        <div class="search-bar">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search transactions..." id="searchInput">
+                        </div>
+                        <div class="table-actions">
+                            <button class="refresh-btn">
+                                <i class="fas fa-sync"></i>
+                                Refresh
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="table-wrapper">
+                        <table class="transactions-table">
+                            <thead>
+                                <tr>
+                                    <th>Transaction ID</th>
+                                    <th>Type</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Date & Time</th>
+                                    <th>Plan/Method</th>
+                                    <th>Balance After</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="transactionTableBody">
+                                <!-- Deposit Transaction -->
+                                <tr class="transaction-row" data-type="deposit" data-status="completed">
+                                    <td>
+                                        <div class="transaction-id">
+                                            <span class="id-text">#TXN-2025-001</span>
+                                            <i class="fas fa-copy copy-id" title="Copy ID"></i>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="transaction-type deposit">
+                                            <div class="type-icon">
+                                                <i class="fas fa-arrow-down"></i>
+                                            </div>
+                                            <span>Deposit</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="amount positive">+USD5,000.00</span>
+                                    </td>
+                                    <td>
+                                        <span class="status-badge completed">Completed</span>
+                                    </td>
+                                    <td>
+                                        <div class="date-time">
+                                            <span class="date">Oct 8, 2025</span>
+                                            <span class="time">02:45 PM</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="method-info">
+                                            <i class="fab fa-bitcoin"></i>
+                                            <span>Bitcoin</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="balance">USD48,873.94</span>
+                                    </td>
+                                    <td>
+                                        <button class="action-btn view" title="View Details">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <!-- Profit Return Transaction -->
+                                <tr class="transaction-row" data-type="profit" data-status="completed">
+                                    <td>
+                                        <div class="transaction-id">
+                                            <span class="id-text">#TXN-2025-002</span>
+                                            <i class="fas fa-copy copy-id" title="Copy ID"></i>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="transaction-type profit">
+                                            <div class="type-icon">
+                                                <i class="fas fa-coins"></i>
+                                            </div>
+                                            <span>Profit Return</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="amount positive">+USD500.00</span>
+                                    </td>
+                                    <td>
+                                        <span class="status-badge completed">Completed</span>
+                                    </td>
+                                    <td>
+                                        <div class="date-time">
+                                            <span class="date">Oct 8, 2025</span>
+                                            <span class="time">01:30 PM</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="method-info">
+                                            <i class="fas fa-chart-line"></i>
+                                            <span>Premium Plan</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="balance">USD43,873.94</span>
+                                    </td>
+                                    <td>
+                                        <button class="action-btn view" title="View Details">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <!-- Investment Transaction -->
+                                <tr class="transaction-row" data-type="investment" data-status="completed">
+                                    <td>
+                                        <div class="transaction-id">
+                                            <span class="id-text">#TXN-2025-003</span>
+                                            <i class="fas fa-copy copy-id" title="Copy ID"></i>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="transaction-type investment">
+                                            <div class="type-icon">
+                                                <i class="fas fa-seedling"></i>
+                                            </div>
+                                            <span>Investment</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="amount negative">-USD2,500.00</span>
+                                    </td>
+                                    <td>
+                                        <span class="status-badge completed">Completed</span>
+                                    </td>
+                                    <td>
+                                        <div class="date-time">
+                                            <span class="date">Oct 7, 2025</span>
+                                            <span class="time">11:15 AM</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="method-info">
+                                            <i class="fas fa-star"></i>
+                                            <span>Gold Plan</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="balance">USD43,373.94</span>
+                                    </td>
+                                    <td>
+                                        <button class="action-btn view" title="View Details">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <!-- Withdrawal Transaction -->
+                                <tr class="transaction-row" data-type="withdraw" data-status="processing">
+                                    <td>
+                                        <div class="transaction-id">
+                                            <span class="id-text">#TXN-2025-004</span>
+                                            <i class="fas fa-copy copy-id" title="Copy ID"></i>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="transaction-type withdraw">
+                                            <div class="type-icon">
+                                                <i class="fas fa-arrow-up"></i>
+                                            </div>
+                                            <span>Withdrawal</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="amount negative">-USD1,000.00</span>
+                                    </td>
+                                    <td>
+                                        <span class="status-badge processing">Processing</span>
+                                    </td>
+                                    <td>
+                                        <div class="date-time">
+                                            <span class="date">Oct 7, 2025</span>
+                                            <span class="time">09:30 AM</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="method-info">
+                                            <i class="fas fa-university"></i>
+                                            <span>Bank Transfer</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="balance">USD45,873.94</span>
+                                    </td>
+                                    <td>
+                                        <button class="action-btn view" title="View Details">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <!-- Bonus Transaction -->
+                                <tr class="transaction-row" data-type="bonus" data-status="completed">
+                                    <td>
+                                        <div class="transaction-id">
+                                            <span class="id-text">#TXN-2025-005</span>
+                                            <i class="fas fa-copy copy-id" title="Copy ID"></i>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="transaction-type bonus">
+                                            <div class="type-icon">
+                                                <i class="fas fa-gift"></i>
+                                            </div>
+                                            <span>Welcome Bonus</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="amount positive">+USD100.00</span>
+                                    </td>
+                                    <td>
+                                        <span class="status-badge completed">Completed</span>
+                                    </td>
+                                    <td>
+                                        <div class="date-time">
+                                            <span class="date">Oct 6, 2025</span>
+                                            <span class="time">08:00 AM</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="method-info">
+                                            <i class="fas fa-star"></i>
+                                            <span>Sign-up Bonus</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="balance">USD46,873.94</span>
+                                    </td>
+                                    <td>
+                                        <button class="action-btn view" title="View Details">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <!-- Referral Commission -->
+                                <tr class="transaction-row" data-type="referral" data-status="completed">
+                                    <td>
+                                        <div class="transaction-id">
+                                            <span class="id-text">#TXN-2025-006</span>
+                                            <i class="fas fa-copy copy-id" title="Copy ID"></i>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="transaction-type referral">
+                                            <div class="type-icon">
+                                                <i class="fas fa-users"></i>
+                                            </div>
+                                            <span>Referral Commission</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="amount positive">+USD50.00</span>
+                                    </td>
+                                    <td>
+                                        <span class="status-badge completed">Completed</span>
+                                    </td>
+                                    <td>
+                                        <div class="date-time">
+                                            <span class="date">Oct 6, 2025</span>
+                                            <span class="time">03:20 PM</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="method-info">
+                                            <i class="fas fa-handshake"></i>
+                                            <span>Level 1 (10%)</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="balance">USD46,773.94</span>
+                                    </td>
+                                    <td>
+                                        <button class="action-btn view" title="View Details">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <!-- Failed Transaction -->
+                                <tr class="transaction-row" data-type="deposit" data-status="failed">
+                                    <td>
+                                        <div class="transaction-id">
+                                            <span class="id-text">#TXN-2025-007</span>
+                                            <i class="fas fa-copy copy-id" title="Copy ID"></i>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="transaction-type deposit">
+                                            <div class="type-icon">
+                                                <i class="fas fa-arrow-down"></i>
+                                            </div>
+                                            <span>Deposit</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="amount neutral">USD750.00</span>
+                                    </td>
+                                    <td>
+                                        <span class="status-badge failed">Failed</span>
+                                    </td>
+                                    <td>
+                                        <div class="date-time">
+                                            <span class="date">Oct 5, 2025</span>
+                                            <span class="time">07:45 PM</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="method-info">
+                                            <i class="fas fa-credit-card"></i>
+                                            <span>Credit Card</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="balance">USD46,723.94</span>
+                                    </td>
+                                    <td>
+                                        <button class="action-btn retry" title="Retry Transaction">
+                                            <i class="fas fa-redo"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <!-- Pending Transaction -->
+                                <tr class="transaction-row" data-type="profit" data-status="pending">
+                                    <td>
+                                        <div class="transaction-id">
+                                            <span class="id-text">#TXN-2025-008</span>
+                                            <i class="fas fa-copy copy-id" title="Copy ID"></i>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="transaction-type profit">
+                                            <div class="type-icon">
+                                                <i class="fas fa-coins"></i>
+                                            </div>
+                                            <span>Profit Return</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="amount positive">+USD200.00</span>
+                                    </td>
+                                    <td>
+                                        <span class="status-badge pending">Pending</span>
+                                    </td>
+                                    <td>
+                                        <div class="date-time">
+                                            <span class="date">Oct 8, 2025</span>
+                                            <span class="time">03:00 PM</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="method-info">
+                                            <i class="fas fa-star"></i>
+                                            <span>Gold Plan</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="balance">USD46,923.94</span>
+                                    </td>
+                                    <td>
+                                        <button class="action-btn view" title="View Details">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <div class="pagination-info">
+                            Showing 1-8 of 247 transactions
+                        </div>
+                        <div class="pagination-controls">
+                            <button class="page-btn prev" disabled>
+                                <i class="fas fa-chevron-left"></i>
+                                Previous
+                            </button>
+                            <div class="page-numbers">
+                                <button class="page-number active">1</button>
+                                <button class="page-number">2</button>
+                                <button class="page-number">3</button>
+                                <span class="page-dots">...</span>
+                                <button class="page-number">31</button>
+                            </div>
+                            <button class="page-btn next">
+                                Next
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Transaction Analytics -->
+            <section class="transaction-analytics">
+                <h2 class="section-title">Transaction Analytics</h2>
+                <div class="analytics-grid">
+                    <div class="analytics-card">
+                        <h3>Transaction Volume (Last 30 Days)</h3>
+                        <div class="chart-container">
+                            <canvas id="volumeChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="analytics-card">
+                        <h3>Transaction Types Distribution</h3>
+                        <div class="chart-container">
+                            <canvas id="typeChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Transaction Detail Modal -->
+    <div class="modal" id="transactionModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Transaction Details</h3>
+                <span class="modal-close" id="modalClose">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="transaction-details">
+                    <div class="detail-section">
+                        <h4>Transaction Information</h4>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <span class="detail-label">Transaction ID:</span>
+                                <span class="detail-value">#TXN-2025-001</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Type:</span>
+                                <span class="detail-value">Deposit</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Amount:</span>
+                                <span class="detail-value">USD5,000.00</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Status:</span>
+                                <span class="detail-value">Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <h4>Payment Information</h4>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <span class="detail-label">Method:</span>
+                                <span class="detail-value">Bitcoin</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Wallet Address:</span>
+                                <span class="detail-value">1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Network Fee:</span>
+                                <span class="detail-value">USD0.00</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Processing Time:</span>
+                                <span class="detail-value">15 minutes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Support Button -->
+    <div class="chat-support">
+        <button class="chat-btn">
+            <span class="chat-text">We Are Here!</span>
+            <div class="chat-icon">
+                <i class="fas fa-comment"></i>
+                <span class="notification-badge">1</span>
+            </div>
+        </button>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        // Transaction filtering and search functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            const transactionRows = document.querySelectorAll('.transaction-row');
+            const searchInput = document.getElementById('searchInput');
+            const statusFilter = document.getElementById('statusFilter');
+            const modal = document.getElementById('transactionModal');
+            const modalClose = document.getElementById('modalClose');
+            const copyIds = document.querySelectorAll('.copy-id');
+            const actionBtns = document.querySelectorAll('.action-btn');
+
+            // Filter by type
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    filterTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    transactionRows.forEach(row => {
+                        const type = row.getAttribute('data-type');
+                        if (filter === 'all' || type === filter) {
+                            row.style.display = '';
+                        } else {
+                            row.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Search functionality
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                transactionRows.forEach(row => {
+                    const text = row.textContent.toLowerCase();
+                    if (text.includes(searchTerm)) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+
+            // Status filter
+            statusFilter.addEventListener('change', function() {
+                const status = this.value;
+                
+                transactionRows.forEach(row => {
+                    const rowStatus = row.getAttribute('data-status');
+                    if (status === 'all' || rowStatus === status) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+
+            // Copy transaction ID
+            copyIds.forEach(copyBtn => {
+                copyBtn.addEventListener('click', function() {
+                    const idText = this.parentElement.querySelector('.id-text').textContent;
+                    navigator.clipboard.writeText(idText).then(() => {
+                        this.style.color = 'var(--accent-green)';
+                        setTimeout(() => {
+                            this.style.color = '';
+                        }, 1000);
+                    });
+                });
+            });
+
+            // View transaction details
+            actionBtns.forEach(btn => {
+                if (btn.classList.contains('view')) {
+                    btn.addEventListener('click', function() {
+                        modal.style.display = 'block';
+                    });
+                }
+            });
+
+            // Close modal
+            modalClose.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+
+            window.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
+            // Export functionality
+            document.querySelector('.export-btn').addEventListener('click', function() {
+                alert('Export feature would download CSV/Excel file with transaction data');
+            });
+
+            // Refresh functionality
+            document.querySelector('.refresh-btn').addEventListener('click', function() {
+                location.reload();
+            });
+
+            // Pagination
+            document.querySelectorAll('.page-number').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.page-number').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

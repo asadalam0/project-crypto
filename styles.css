@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top left, #0a0f0a, #000);
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 🌌 Background Glow Effects */
+body::before {
+  content: '';
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(14, 173, 105, 0.2), transparent 60%);
+  border-radius: 50%;
+  top: -100px;
+  left: -100px;
+  animation: floatGlow 6s ease-in-out infinite alternate;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(14, 173, 105, 0.15), transparent 70%);
+  border-radius: 50%;
+  bottom: -120px;
+  right: -100px;
+  animation: floatGlow 8s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes floatGlow {
+  from { transform: translateY(0px); opacity: 0.8; }
+  to { transform: translateY(25px); opacity: 1; }
+}
+
+/* 🧊 Form Container (Glassmorphism) */
+.form-container {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(14, 173, 105, 0.25);
+  border-radius: 20px;
+  padding: 50px 40px;
+  width: 360px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 25px rgba(14, 173, 105, 0.15);
+  text-align: center;
+  display: none;
+  animation: fadeIn 1.5s ease;
+  z-index: 10;
+}
+
+.form-container.active {
+  display: block;
+}
+
+/* 🟩 Header */
+.form-container h1 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #0EAD69;
+  text-shadow: 0 0 12px rgba(14, 173, 105, 0.5);
+  margin-bottom: 10px;
+}
+
+.form-container p {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-bottom: 30px;
+}
+
+/* ✍️ Input Fields */
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+  box-shadow: 0 0 10px #0EAD69;
+  transform: scale(1.02);
+}
+
+/* 💚 Button */
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #0EAD69, #0b8d58);
+  color: #000;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 15px rgba(14, 173, 105, 0.3);
+}
+
+.form-container button:hover {
+  background: linear-gradient(90deg, #39d18e, #0EAD69);
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(14, 173, 105, 0.6);
+}
+
+/* ⬇️ Dropdown */
+select {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, #0EAD69 50%),
+                    linear-gradient(135deg, #0EAD69 50%, transparent 50%);
+  background-position: calc(100% - 20px) calc(1em + 2px),
+                       calc(100% - 15px) calc(1em + 2px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+/* 🔗 Links */
+.extra-links {
+  margin-top: 20px;
+}
+
+.extra-links p {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.extra-links a {
+  color: #0EAD69;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.extra-links a:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 6px #0EAD69;
+}
+
+.forgot {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.85rem;
+}
+option {
+  background-color: #111;
+  color: #fff;
+}
+
+
+/* ✨ Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 Responsive */
+@media (max-width: 480px) {
+  .form-container {
+    width: 90%;
+    padding: 35px 25px;
+  }
+}

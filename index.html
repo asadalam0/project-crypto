@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EstateX Token | Login</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="form-container active" id="login-form">
+    <h1>GlobeRise</h1>
+    <p>Tokenizing Real Estate for the Future</p>
+    <form  action="">
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <a href="GlobalRise/index.html"><button type="button" >Login</button></a>
+    </form>
+
+    <div class="extra-links">
+      <p>Don’t have an account? <a href="#" onclick="showForm('register-form')">Register</a></p>
+      <a href="#" class="forgot">Forgot Password?</a>
+    </div>
+  </div>
+
+  <div class="form-container" id="register-form">
+    <h1>GlobeRise</h1>
+    <p>Tokenizing Real Estate for the Future</p>
+    <form action="">
+      <input type="name" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <select name="role" required>
+         <option value="">--Select Role--</option>
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+      </select>
+      <button type="submit">Register</button>
+    </form>
+
+    <div class="extra-links">
+      <p>Already have an account? <a href="#" onclick="showForm('login-form')">Login</a></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

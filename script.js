@@ -8,7 +8,7 @@ form.addEventListener("submit", async (e) => {
   const password = document.getElementById("password").value;
 
   try {
-    const response = await fetch("https://api.globerise.eu/api/auth/login", {
+    const response = await fetch('https://cors-anywhere.herokuapp.com/https://api.globerise.eu/api/v1/auth/login', {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
@@ -37,4 +37,5 @@ form.addEventListener("submit", async (e) => {
     message.textContent = "Something went wrong.";
   }
 });
+
 
